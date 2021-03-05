@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load i18n %}
+{% block title %} Ip Finder | iCoder {% endblock title %}
+
+{% block ipfinderactive %} active {% endblock ipfinderactive %}
+
+{% block body %}
+
+<div class="container"><br>
+	<center><h1>Django Ip Finder</h1></center>
+	<form action="/ipfinder" method="post" class="mt-3">
+		{% csrf_token %}
+		<div class="form-group">
+			<input type="text" class="form-control" name="search" placeholder="Enter Ip Address Here...">
+		</div>
+		<input type="submit" class="btn btn-primary">
+	</form><br><br>
+	<p>Ip Address Is : <strong>{{data.ip}}</p></strong>
+	<p>City Location Is : <strong>{{data.city}}</p></strong>
+	<p>IP Country Is : <strong>{{data.country_name}}</p></strong>
+	<p>Country Capital Name Is : <strong>{{data.country_capital}}</p></strong>
+	<p>Country Code Is : <strong>{{data.country_code_iso3}}</p></strong>
+	<p>Region Name Is : <strong>{{data.region}}</p></strong>
+	<p>Available Languages Is : <strong>{{data.languages}}</p></strong>
+	<p>Latitude Is : <strong>{{data.latitude}}</p></strong>
+	<p>Longitude Is: <strong>{{data.longitude}}</p></strong>
+	<p>Country TLD(Top Level Domain) Is : <strong>{{data.country_tld}}</p></strong>
+	<p>Time Zone Is : <strong>{{data.timezone}}</p></strong>
+	<p>Available Calling Code : <strong>{{data.country_calling_code}}</p></strong>
+	<p>Country area (in sq km) Is : <strong>{{data.country_area}} sq km</p></strong>
+	<p>Country Population Is: <strong>{{data.country_population}}</p></strong>
+	<p>Ip Address Realated European Union (EU) : <strong>{{data.in_eu}}</p></strong>
+	<p>Country Autonomous System number Is : <strong>{{data.asn}}</p></strong>
+	<p>Available Currency Is : <strong>{{data.currency}}</p></strong>
+		<p>Country Currency Name Is: <strong>{{data.currency_name}}</p></strong>
+	<p>Interent Network Is : <strong>{{data.org}}</p></strong>
+	<p>Contitude Code Is : <strong>{{data.continent_code}}  9205581412</p></strong>
+	<p>Postal Code Is : <strong>{{data.postal}}</p></strong>
+	<p>UTC Offset Is : <strong>{{data.utc_offset}}</p></strong>
+	<!-- <p>{{data}}</p> -->
+</div>
+
+{% endblock body %}

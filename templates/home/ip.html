@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+{% load i18n %}
+{% block title %} Ip Info | iCoder {% endblock title %}
+
+
+
+{% block body %}
+
+<div class="container">
+	<center><h1>Enter target Ip Address</h1></center>
+	<br>
+	<form action="" method="get">
+		<label for="exampleInputEmail1"><strong>Enter Ip Address here....</strong></label>
+	    <input name="ip_info" type="text" class="form-control" id="" aria-describedby="textHelp"><br>
+	    <center><button class="btn btn-primary">See Information</button></center>
+	</form>
+</div>
+
+{% endblock body %}

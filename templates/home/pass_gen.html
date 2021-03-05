@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load i18n %}
+{% block title %} Password Generator | iCoder {% endblock title %}
+
+<!-- {% block contactactive %} active {% endblock contactactive %} -->
+
+{% block body %}
+
+<div class="container">
+	<h2>Password Generator Page</h2>
+	<form action="" method="get">
+	  <div class="form-group"><br>
+	    <label for="exampleInputEmail1"><strong>Enter Your Password Strength</strong></label>
+	    <input name="password" type="digit" class="form-control" id="" aria-describedby="textHelp">
+	    
+	    <center><button class="btn btn-primary m-2">Click</button></center>
+
+	    <h3><strong>{{password}} </strong></h3>
+	  </div>
+
+	</form>
+</div>
+{% endblock body %}
